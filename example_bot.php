@@ -50,7 +50,8 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                    require_once('includes/text.php'); // Type: Text
+                    require_once('includes/text.php'); // Type: Text    
+                ';  
                     require_once('includes/image.php'); // Type: Image
                     require_once('includes/video.php'); // Type: Video
                     require_once('includes/audio.php'); // Type: Audio
@@ -58,6 +59,7 @@ foreach ($client->parseEvents() as $event) {
                     require_once('includes/sticker.php'); // Type: Sticker
                     require_once('includes/imagemap.php'); // Type: Imagemap
                     require_once('includes/template.php'); // Type: Template
+                ':
                     break;
                 default:
                     //error_log("Unsupporeted message type: " . $message['type']);
@@ -87,10 +89,7 @@ https://github.com/GoneTone/line-example-bot-php'
                 'messages' => array(
                     array(
                         'type' => 'text',
-                        'text' => '大家好，這是一個範例 Bot OuO
-
-範例程式開源至 GitHub (包含教學)：
-https://github.com/GoneTone/line-example-bot-php'
+                        'text' => '你好，我是測試用的社團發文提醒機器人'
                     )
                 )
             ));
